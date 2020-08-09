@@ -1,5 +1,6 @@
 import itertools
 
+
 def travelling_salesperson(mat_adj, n):
     mat_d = [{} for i in range(n-1)]
 
@@ -19,6 +20,7 @@ def travelling_salesperson(mat_adj, n):
                 mat_d[i][c] = min(tmp)
 
     return mat_d
+    
     
 if __name__ == '__main__':
     mat = np.array([
