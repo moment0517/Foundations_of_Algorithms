@@ -1,7 +1,5 @@
 #include <queue>
 #include <iostream>
-#include <cmath>
-#include <limits>
 
 using namespace std;
 
@@ -18,9 +16,6 @@ void find_second_largest(int *arr, int n, int &second_largest)
     queue<Node *> tour;
     for (int i = 0; i < n; i++)
         tour.push(new Node(arr[i]));
-    int exn = (int)exp2(ceil(log2(n)));
-    for (int i = n; i < exn; i++)
-        tour.push(new Node(numeric_limits<int>::min()));
 
     while (tour.size() > 1)
     {
