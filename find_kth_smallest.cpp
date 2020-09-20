@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 
 using namespace std;
 
@@ -7,6 +8,7 @@ int n = 6;
 
 int find_kth_smallest(int low, int high, int k)
 {
+    assert(low <= k && k <= high);
     int pivot = low;
     int i = low, j = low + 1;
     int tmp;
